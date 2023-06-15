@@ -1,22 +1,51 @@
 GIT-GITHUB UNIT 1  DATE:08.06.2023
 
---Local'de repo oluşturma ve Git_Github kullanımı ;
+---Local'de repo oluşturma ve Git_Github kullanımi---
+
 1-Çalışacağımız klazörü seçip yada yeni bir klasör oluşturup, klasörün yolunu gösteren bölüme cmd yazıp
 enter yapıp açmış olduğumuz klasörün yolunda terminalimizi açmış oluruz
+
 2-Ve bu dizinde açılan terminale GİT INIT küçük harflerler yazarız ve initilaze empty git repository yazısını
 gördüğümüzde bu çalışma alanımızda boş bir repository oluşturmuş oluruz.
+
 3-Git init yaptıktan sonraki çalışma alanımızın ismine Working space denir.
+
 4-git add . komutuyla working space'de ki kodlarımızı staging area dediğimiz bekleme alanına taşırız
+
 5-git commit -m "version adı" kodunu yazarak stage'deki kodlarımızdan version oluşturmuş oluruz.
+
 6-working space ve stage'de kodlarımızın durumunu görmek için git status komutunu kullanırız.
+
 7-commit stora(yani versiyon oluşturduğumuz yer) daki versiyonlarımızı görmek için de git log --oneline komutunu kullanırız
+
 8-Oluşturmuş olduğumuz versiyonu github'a gönderebilmek için git push <github repository adresi> yada devamlı kullanıcağımız bir repoysa 1 kerelik --> git remote add origin <githuFb repo adresi> sonra --> git push -u origin master komutuyla github'a gönderebiliriz
+
 9-Github'a gönderdiğimiz kodlarıda başka bir çalışma ortamına çekebilmek için git pull <github repo adresi> yazarak çekebiliriz
+
 10-Localimizde ilişkendirdiğimiz adresi git remote -v komutuyla görebiliriz.
+
 11-Github tarafında yaptığımız bir değişlik olursa adresi bir kerelik tanımladığımız için sadece git pull yapmamız yeterlidir.
+
 Aynı şekilde adresi tanımladığımız için sadece git push komutu ilede kodlarımızı gönderebiliriz.
 
 
-GIT-GITHUB UNIT 2  DATE:14.06.2023
+
+----GIT-GITHUB UNIT 2  DATE:14.06.2023----
 
 ----Restore / Branch / Stash Komutlari---- 
+
+1- Working Space ve Staging Area daki yapmış olduğumuz değişiklikleri iptal edebiliriz.
+Working Space de yaptığımız bir güncellemeyi geri almak için ---> git restore . <-- komutuyla yapılan değişiklikleri geri alabiliriz
+Eğer Stage den geri almak istersek --> git restore --staged . <-- komutuyla working space'e geri alabiliriz
+Ama her ikisindende yazdıklarımız kaldırmak istersek --> git reset --hard <-- komutunu kullanırız.
+
+2- Working Space ve Staging Area daki yapmış olduğumuz değişiklikleri kalıcı olarak iptal etmek istemiyorsak yani o anlık iptal 
+edip sonra tekrar kullanmak istiyorsak --> git stash <-- komutu ile Working Space ve Staging Area daki kodları geçici olarak
+hafızaya alırız. Tekrar kullanmak istediğimizde --> git stash pop <-- komutuyla tekrar getirebiliriz
+
+--Versiyonlar Arası Geçiş Komutları---
+
+1-Versiyonlar arası geçiş için git log --oneline komutuyla versiyonlara ait hash kodu kullanarak,--> git checkout(geçiş komutu) hashkod . <-- 
+komutuyla hash kodunu yazdığımız versiyonun staging area bölümüne geçiş yaparız. Geçiş yaptığımız versiyonu kalıcı hale getirmek istersek
+commit -m"Version ismi" koduyla kalıcı yeni bir versiyon olarak kaydederiz. Eğer kalıcı olmasın son güncel versiyonda kalsın dersek
+--> git reset --hard <-- komutuyla geçiş işlemini iptal etmiş ve güncel versiyonda kalmış oluruz.
