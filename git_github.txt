@@ -1,3 +1,5 @@
+GIT-GITHUB UNIT 1  DATE:08.06.2023
+
 --Local'de repo oluşturma ve Git_Github kullanımı ;
 1-Çalışacağımız klazörü seçip yada yeni bir klasör oluşturup, klasörün yolunu gösteren bölüme cmd yazıp
 enter yapıp açmış olduğumuz klasörün yolunda terminalimizi açmış oluruz
@@ -13,3 +15,8 @@ gördüğümüzde bu çalışma alanımızda boş bir repository oluşturmuş ol
 10-Localimizde ilişkendirdiğimiz adresi git remote -v komutuyla görebiliriz.
 11-Github tarafında yaptığımız bir değişlik olursa adresi bir kerelik tanımladığımız için sadece git pull yapmamız yeterlidir.
 Aynı şekilde adresi tanımladığımız için sadece git push komutu ilede kodlarımızı gönderebiliriz.
+
+
+GIT-GITHUB UNIT 2  DATE:14.06.2023
+
+--Restore / Branch / Stash Komutlari 
